@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>石天亮-前端工程师</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .kangyong {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    h1 {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #0070C0;
+      border-bottom: 3px solid #ccc;
+      padding-bottom: 5px;
+      position: relative;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      background: #0070C0;
+      left: 0;
+      top: 100%;
+    }
+
+    .profile-item {
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .key-value {
+      width: 50%;
+      display: flex;
+    }
+
+    .profile-item-key {
+      width: 100px;
+      text-align: justify;
+    }
+
+    .profile-item-key:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      height: 0;
+    }
+
+    .prog-skill-item {
+      margin: 20px 0;
+    }
+
+    .work-expricene-item {
+      padding: 20px 0;
+    }
+
+    .work-expricene-item>div {
+      padding: 10px 0 0;
+    }
+
+    .work-com {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 100px;
+    }
+
+    .work-com p:last-child {
+      font-weight: bold;
+    }
+
+    .work-position,
+    .project-name,
+    .project-time {
+      display: flex;
+    }
+
+    .work-position>p:first-of-type,
+    .work-duty>p:first-of-type,
+    .project-name>p:first-of-type,
+    .project-time>p:first-of-type,
+    .project-duty>p:first-of-type,
+    .project-key>p:first-of-type {
+      width: 100px;
+      text-align: justify;
+    }
+
+    .work-position>p:first-child:after,
+    .work-duty>p:first-child:after,
+    .project-name>p:first-of-type:after,
+    .project-time>p:first-of-type:after,
+    .project-duty>p:first-child:after,
+    .project-key>p:first-child:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      height: 0;
+    }
+
+    .work-duty,
+    .project-duty,
+    .project-key {
+      display: flex;
+      margin-bottom: 20px;
+
+    }
+
+    .work-duty-content p,
+    .project-duty-content p,
+    .project-key-content p {
+      margin-bottom: 10px;
+    }
+
+    .project-item {
+      padding: 20px 0;
+    }
+
+    .project-item>div {
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .project-item img {
+      position: absolute;
+      left: 0;
+      top: 5px
+    }
+
+    img {
+      width: 12px;
+      height: 14px;
+
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/html2pdf.js/0.9.1/html2pdf.bundle.js"></script>
+</head>
+
+<body>
+  <div class="kangyong" id="kangyong">
+    <h1>个人简历</h1>
+    <div class="profile">
+      <h2>个人资料</h2>
+      <div class="profile-item">
+        <div class="key-value">
+          <p class="profile-item-key">姓名：</p>
+          <p class="profile-item-value">石天亮</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">性别：</p>
+          <p class="profile-item-value">男</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">籍贯：</p>
+          <p class="profile-item-value">安徽亳州</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">电话：</p>
+          <p class="profile-item-value">17718261213</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">工作年限：</p>
+          <p class="profile-item-value">三年</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">专业：</p>
+          <p class="profile-item-value">计算机科学与技术</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">邮箱：</p>
+          <p class="profile-item-value">110395328@qq.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="profile">
+      <h2>教育经历</h2>
+      <div class="profile-item">
+        <div class="key-value">
+          <p class="profile-item-key">学校：</p>
+          <p class="profile-item-value">安徽师范大学</p>
+          </p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">专业：</p>
+          <p class="profile-item-value">计算机科学与技术</p>
+        </div>
+        <div class="key-value">
+          <p class="profile-item-key">时间：</p>
+          <p class="profile-item-value">2016-2020</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="profile">
+      <h2>求职意向</h2>
+      <div class="profile-item">
+        <div class="key-value">
+
+          <p class="profile-item-key">期望职位：</p>
+          <p class="profile-item-value">web前端工程师</p>
+        </div>
+        <div class="key-value">
+
+          <p class="profile-item-key">期望薪资：</p>
+          <p class="profile-item-value">面议</p>
+        </div>
+        <div class="key-value">
+
+          <p class="profile-item-key">工作性质：</p>
+          <p class="profile-item-value">全职</p>
+        </div>
+        <div class="key-value">
+
+          <p class="profile-item-key">工作状态：</p>
+          <p class="profile-item-value">月内到岗</p>
+        </div>
+      </div>
+    </div>
+    <div class="prog-skill">
+      <h2>专业技能</h2>
+      <div class="prog-skill-item">
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          熟练掌握Vue，对其源码以及实现方式有一些了解
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          熟练掌握React技术栈、了解React的性能优化方法及相关Api的使用
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          深入了解 Redux的使用及相关源码实现，能进行中间件的开发；
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          熟练掌握JavaScript的运行机制及其模块化、事件循环、Promise、继承、闭包、垃圾回收等知识
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          熟悉 Webpack 等前端工程化内容,了解webpack打包配置等知识,了解webpack性能优化知识，有相关优化经验
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          熟悉移动端开发标准，能够进行移动端开发页面适配以及兼容性适配
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          熟悉HTTP协议，了解websocket协议的，对前后端合作模式有深入了解。
+        </p>
+
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+
+          了解原生微信小程序开发、了解微信平台的开发流程、了解uniApp跨端应用的开发
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+
+          对TypeScript有一些了解，对其类型兼容原理有一些了解
+        </p>
+        <p class="prog-skill-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+
+          了解nodejs及其相关原理，能够使用eggjs/koajs配合线上部署
+        </p>
+
+      </div>
+    </div>
+    <div class="work-expricene">
+      <h2>工作经历</h2>
+      <div class="work-expricene-item">
+        <div class="work-com">
+          <p>2020/10– 至今</p>
+          <p>安徽科讯金服</p>
+        </div>
+        <div class="work-position">
+          <p>职位：</p>
+          <p>web前端工程师</p>
+        </div>
+        <div class="work-duty">
+          <p>职责：</p>
+          <div class="work-duty-content">
+            <p>1.负责web端及h5的代码架构及实现。</p>
+            <p>2.处理前端框架与第三方工具配合问题。</p>
+            <p>3.对项目进行整合打包、bug的修复。</p>
+            <p>4.项目的定期维护和版本的更新。</p>
+            <p>5.参与新技术研讨与分享。</p>
+          </div>
+        </div>
+        <!-- <div class="work-expricene-item">
+          <div class="work-com">
+            <p>2020/06– 2021/7</p>
+            <p>南京益高科技</p>
+          </div>
+          <div class="work-position">
+            <p>职位：</p>
+            <p>后端开发</p>
+          </div>
+          <div class="work-duty">
+            <p>职责：</p>
+            <div class="work-duty-content">
+              <p>1.参与已有项目的维护及bug修复。</p>
+              <p>2.参与前期项目的需求分析。</p>
+              <p>2.页面的交互效果实现与优化。</p>
+              <p>3.对项目进行整合打包、bug的修复</p>
+              <p>4.项目的定期维护和版本的更新。</p>
+              <p>5.参与新技术学习与分享。</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="project">
+      <h2>项目经验</h2>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目一:</p>
+          <p>菁星校园 (uniapp)</p>
+        </div>
+        <!-- <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>3个月</p>
+        </div> -->
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p> 用于大学生认证，教师管理，组织团建，线上购物等一个大学内部使用的app</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.开发项目孵化模块</p>
+            <p>2.与后端配合调试</p>
+            <p>3.bug处理及线上优化。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用uniapp + uviwe 进行开发</p>
+            <p>2.根据ui蓝湖出图1:1还原设计稿</p>
+            <p>3.与后端进行接口调试</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目二:</p>
+          <p>cratus商品分享web页 (移动端H5)</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>3个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p> cratusApp 商品分享到外部打开主要是引流下载app</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.整合需求，框架搭建，组件封装，独立开发</p>
+            <p>2:与后端联调</p>
+            <p>3.bug处理及线上优化。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用react + react-router + axios + weUi 技术栈进行开发</p>
+            <p>2.完整的登录，注册，商品购买功能</p>
+            <p>3.起跳微信支付功能 支付宝二维码等</p>
+            <p>4.根据ui蓝湖出图1:1还原设计稿</p>
+            <p>5.页面嵌入flutter</p>
+            <p>6.与后端进行接口调试</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目三:</p>
+          <p>微信客户自助服务系统（h5(移动) + pc） </p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>4个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p> 安吉公众号客户自助服务（移动端)+ 微信模板管理系统(pc)</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.对需求整合，ui设计，框架搭建，组件封装等</p>
+            <p>2.项目与第三方工具之间的配合及问题处理</p>
+            <p>3.bug处理及线上优化。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用react + react-router + antd3.x + axios 技术栈 进行应用开发（PC）。</p>
+            <p>2.使用next.js + react + antdMobile 进行移动端开发。</p>
+            <p>3.合理解决移动端渲染及适配问题</p>
+            <p>4.对接第三方供应商进行支付功能开发</p>
+            <p>5.活体检测，公安对比验证</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目四:</p>
+          <p>数据平台(PC))</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>3个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p>对公司营销的各种数据进行可视化操作</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.根据设计图完成页面的构建和布局</p>
+            <p>2.组件化开发，封装请求统一处理响应数据</p>
+            <p>3.bug处理及线上优化。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用vue + vuex + vue-router + elementUi + axios + echarts 技术栈 进行应用开发。</p>
+            <p>2.代码仓库管理，分支区分管理</p>
+            <p>3.柱状图，折线图，饼图的组件封装，使开发更便捷。</p>
+            <p>4.对异步请求的数据优化。</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目五:</p>
+          <p>三流合一系统</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>4个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p> 这是一款对SP经销商，渠道服务商，公司管理人员，三种身份统一集成便于公司管理开发的系统。</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.数据库管理平台Pc端项目搭建。</p>
+            <p>2.代码仓库管理，分支区分管理</p>
+            <p>3.梳理业务逻辑，协同开发</p>
+            <p>4.bug处理及性能优化</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.应用antd3.x搭配h5+c3完成页面的整体布局。</p>
+            <p>2.使用react + react-router + axios 技术栈 进行应用开发（PC）。。</p>
+            <p>3.面向对象编程，函数式写法，hook钩子使用</p>
+            <p>4.用户权限分配</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目六:</p>
+          <p>短信平台（pc）</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>2个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p>对公司所有外发短信功能进行统一管理。</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.项目的初始化及相关配置。</p>
+            <p>2.梳理业务逻辑，个人开发。</p>
+            <p>3.数据的储存与交互。</p>
+            <p>4.项目的测试环境和线上环境部署。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用vue + vue-router + axios技术栈进行项目开发。</p>
+            <p>2.短信模板模块封装。</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目七:</p>
+          <p>电子签署（公众号） </p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>1.5个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p>客户进行线上签署。</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.项目的初始化以及相关配置</p>
+            <p>2.梳理业务逻辑，个人开发</p>
+            <p>3.项目的测试环境和线上环境部署。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.原生js + jq开发。</p>
+            <p>2.活体检测，公安比对</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目八:</p>
+          <p>凭证平台（移动端）</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>1个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p>用户资料上传，数据收集等功能。</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.项目基础功能框架搭建</p>
+            <p>2.仓库管理。</p>
+            <p>3.梳理业务逻辑，个人开发</p>
+            <p>4.bug修改，性能优化</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用vue + axios + vant + vue-router技术栈进行开发。</p>
+            <p>2.使用node-express进行接口开发，对接公司内部邮箱。</p>
+            <p>3.数据的存储与交互。</p>
+            <p>4.项目的测试环境和线上环境部署。</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目九:</p>
+          <p>安吉客户端（app）(协同开发)</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>5个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p>主要负责sp报销，预审批，节点管理等。</p>
+        </div>
+        <div class="project-duty">
+          <p>项目职责:</p>
+          <div class="project-duty-content">
+            <p>1.根据设计图完成页面的构建和布局</p>
+            <p>2.配置页面路由，实现嵌套路由</p>
+            <p>3.根据需求文档实现前端功能。</p>
+            <p>4.封装组件实现组件通信。</p>
+          </div>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用reactNative + axios + redux技术栈进行开发。</p>
+            <p>2.主要负责前期，拆分各个组件，首页路线以及制定模块开发。</p>
+            <p>3.使用骨架屏配合本地缓存保证弱网和无网下页面的显示正确。</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目十:</p>
+          <p>以租代购(PC)</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目周期:</p>
+          <p>1个月</p>
+        </div>
+        <div class="project-time">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAIAAAB7HQGFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAa0lEQVR42pWRgQnAMAgEf5dO5yhO4iDOkVnap0Iwxdb0IBDI5aMG5x7gUlUz6z0iIgDGGI1Hg5HHzZcXkXGBwbGvvakSZtPORS8eD3KJuejFc3dUPD02kY/rdznFabz2EW2SZi5bc/7xby0Xfsm7s3Xs0QwAAAAASUVORK5CYII="
+            alt="">
+          <p>项目描述:</p>
+          <p>主要负责sp报销，节点审批等。</p>
+        </div>
+        <div class="project-key">
+          <p>技术要点:</p>
+          <div class="project-key-content">
+            <p>1.使用angular1.0 + ts技术栈进行开发。</p>
+            <p>2.根据业务需求维护老功能和新功能开发。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // var element = document.getElementById('kangyong');
+  // var worker = html2pdf();
+  // var worker = html2pdf().from(element).save();
+</script>
+
+</html>
